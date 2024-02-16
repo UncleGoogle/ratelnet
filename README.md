@@ -17,7 +17,7 @@ Middleware hub to apply different security tools to different user messages or f
 
 As I don't know how much time I have devote to this task, I decided to start with initial plan describing my vision about the application in the form of TODO list:
 
-- setup slack app with files:read permission (to be extended later with all kind of messsages)
+- [x] setup slack app with files:read permission (to be extended later with all kind of messsages)
 
 - ratel -- core app:
     - test dealing with messages in/out with dummy tasks Manager (implement __get_messages to be read from memory)
@@ -26,10 +26,12 @@ As I don't know how much time I have devote to this task, I decided to start wit
 
 - DPL as separate app -- this should serve API we can pass messages from different sources
     - I decided to keep db and admin panel ect. on the DPL side instead of core app because it is simpler and fits SRP rule for now. RatelNet core should know only about tasks and there results. Those result (DTOs) could be saved in the internal db in the future as well for the purpose of sharing data between different scaners, or applying different scanning policies but for now it will deal with pure tasks only
+    - [x] project setup
+    - [x] main view endpoint: POST with binary content -> synchornous output if pass or not with details
+    - implement the check: maching regex patterns
     - data models
         - model FileMessage (id, channel, content, leak: bool)   # to be extended with sender and receiver, date later
         - model RegexPattern (id, label, content)
-    - implement the check: maching regex patterns
     - manage patterns via django admin (add, remove, view)
     - store catched messages with pattern id
     - view catched messages with pattern label

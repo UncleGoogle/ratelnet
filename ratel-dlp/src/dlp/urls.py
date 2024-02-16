@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from dlp.views import CheckContentView
+
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("check/", CheckContentView.as_view(), name="check_content"),
 ]
