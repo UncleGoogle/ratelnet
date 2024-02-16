@@ -5,7 +5,7 @@ Middleware hub to apply different security tools to different user messages or f
 
 # Scanners
 
-## Ratel Scan (DLP, Data Loss Protection)
+## Ratel DLP (Data Loss Protection)
 
 
 # Data channels

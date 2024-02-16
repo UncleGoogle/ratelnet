@@ -1,0 +1,4 @@
+-e file:.
+-r requirements.txt
+pytest==7.4.0
+pytest-django==4.8.0
